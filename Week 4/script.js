@@ -24,6 +24,6 @@ fetch('https://jsonplaceholder.typicode.com/users',)
         <th>Website</th>
         <th>Company</th>
       </tr>`
-        const tableContainer = document.querySelector('.table-product');
+        const tableContainer = document.querySelector('.table-datas');
         tableContainer.innerHTML = header+field;
     });
