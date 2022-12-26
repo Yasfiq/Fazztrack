@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nomor 3</title>
+    <style>
+      .container {
+        width: 80%;
+        margin: 30px auto;
+      }
+      .bg-lightblue {
+        background-color: lightblue;
+      }
+      .text-white {
+        color: #fff;
+      }
+      .ff-sans-serif {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .fs-1 {
+        font-size: 35px;
+      }
+      .fs-4 {
+        font-size: 20px;
+      }
+      .text-shadow {
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-start {
+        text-align: left;
+      }
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .mt-4 {
+        margin-top: 20px;
+      }
+      .px-auto {
+        padding-left: auto;
+        padding-right: auto;
+      }
+      .d-block {
+        display: block;
+      }
+      .fw-bold {
+        font-weight: 700;
+      }
+      .w-100 {
+        width: 100%;
+      }
+      .input-primary {
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+      .input-primary::placeholder {
+        color: rgba(164, 164, 164, 0.5);
+      }
+      .input-primary:focus {
+        outline-width: 2px;
+        outline-color: rgba(48, 48, 48, 0.3);
+      }
+      .btn-primary {
+        background-color: rgb(0, 146, 195);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-lightblue">
+    <section class="container">
+      <img
+        class="mx-auto d-block"
+        src="student-vector.webp"
+        alt="Student Vector"
+        height="200px"
+      />
+      <h1 class="text-white ff-sans-serif fs-1 text-shadow text-center">
+        Menghitung Rata - rata Nilai Ujian Nasional (UN)
+      </h1>
+      <div class="nilai-UN w-100">
+        <table class="mx-auto" border="0" cellpadding="5" cellspacing="0">
+          <tr>
+            <th class="text-start ff-sans-serif fw-bold fs-4">
+              <label for="bahasa-indonesia">Bahasa Indonesia</label>
+            </th>
+            <td class="fs-4 fw-bold">:</td>
+            <td>
+              <input
+                class="input-primary"
+                placeholder="Masukkan nilai"
+                type="number"
+                min="0"
+                max="100"
+                name="bahasa-indonesia"
+                id="bahasa-indonesia"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th class="text-start ff-sans-serif fw-bold fs-4">
+              <label for="bahasa-inggris">Bahasa Inggris</label>
+            </th>
+            <td class="fs-4 fw-bold">:</td>
+            <td>
+              <input
+                class="input-primary"
+                placeholder="Masukkan nilai"
+                type="number"
+                min="0"
+                max="100"
+                name="bahasa-inggris"
+                id="bahasa-inggris"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th class="text-start ff-sans-serif fw-bold fs-4">
+              <label for="matematika">Matematika</label>
+            </th>
+            <td class="fs-4 fw-bold">:</td>
+            <td>
+              <input
+                class="input-primary"
+                placeholder="Masukkan nilai"
+                type="number"
+                min="0"
+                max="100"
+                name="matematika"
+                id="matematika"
+              />
+            </td>
+          </tr>
+          <tr class="text-start ff-sans-serif fw-bold fs-4">
+            <th><label for="ipa">IPA</label></th>
+            <td class="fs-4 fw-bold">:</td>
+            <td>
+              <input
+                class="input-primary"
+                placeholder="Masukkan nilai"
+                type="number"
+                min="0"
+                max="100"
+                name="ipa"
+                id="ipa"
+              />
+            </td>
+          </tr>
+        </table>
+        <button
+          class="hitung-btn btn-primary mx-auto mt-4 d-block"
+          type="submit"
+        >
+          Hitung
+        </button>
+      </div>
+    </section>
+
+    <script>
+      const inputNilai = document.querySelectorAll(".input-primary");
+      const hitungBtn = document.querySelector(".hitung-btn");
+      const pesanError = document.createElement("p");
+      let total = 0;
+      pesanError.style.color = "red";
+      pesanError.setAttribute(
+        "class",
+        "fs-4 fw-bold text-center ff-sans-serif"
+      );
+      hitungBtn.addEventListener("click", function () {
+        total = 0;
+        for (let index = 0; index < inputNilai.length; index++) {
+          if (
+            inputNilai[0].value == "" &&
+            inputNilai[1].value == "" &&
+            inputNilai[3].value == "" &&
+            inputNilai[1].value == ""
+          ) {
+            pesanError.innerHTML = "";
+            const error = document.createTextNode("Kamu belum mengisi nilai!");
+            pesanError.appendChild(error);
+            hitungBtn.before(pesanError);
+            return;
+          } else if (inputNilai[index].value == "") {
+            pesanError.innerHTML = "";
+            const error = document.createTextNode(
+              "Isi nilai kamu dengan lengkap!"
+            );
+            pesanError.appendChild(error);
+            hitungBtn.before(pesanError);
+            return;
+          } else {
+            pesanError.innerHTML = "";
+            total += parseInt(inputNilai[index].value);
+          }
+        }
+        if (pesanError.innerHTML == "") {
+          let Ratarata = total / inputNilai.length;
+          let grade = "";
+          if (Ratarata >= 90 && Ratarata <= 100) {
+            grade = "A";
+          } else if (Ratarata >= 80 && Ratarata < 90) {
+            grade = " B";
+          } else if (Ratarata >= 70 && Ratarata < 80) {
+            grade = " C";
+          } else if (Ratarata >= 60 && Ratarata < 70) {
+            grade = " D";
+          } else if (Ratarata >= 0 && Ratarata < 60) {
+            grade = " E";
+          } else {
+            grade = " NONE, karena kamu masukkan nilai -0 atau +100";
+          }
+          document.querySelector(".nilai-UN").classList.add("hide");
+          document.querySelector(".container h1").after(pesanError);
+          const hasil = document.createTextNode(
+            "Rata - rata nilai kamu " + Ratarata + " dengan Grade " + grade
+          );
+          pesanError.style.color = "#000";
+          pesanError.appendChild(hasil);
+        }
+      });
+    </script>
+  </body>
+</html>
