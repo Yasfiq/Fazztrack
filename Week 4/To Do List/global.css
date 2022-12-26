@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "Playfulist";
+    src: url(Playfulist.ttf);
+}
+@font-face {
+    font-family: "Lato";
+    src: url(Lato-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Lato";
+    src: url(Lato-Bold.ttf);
+    font-weight: 700;
+}
+/* CSS RESET */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* SIZING */
+.w-100 {
+    width: 100%;
+}
+
+/* Display */
+.d-block {
+    display: block;
+}
+.d-flex {
+    display: flex;
+}
+
+/* Container */
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Flexbox */
+.flex-column {
+    flex-direction: column;
+}
+.place-content-center {
+    justify-content: center;
+    align-items: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+
+/* Text Transform */
+.text-start {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+
+/* Margin */
+.mt-4 {
+    margin-top: 20px;
+}
+.mt-5 {
+    margin-top: 45px;
+}
+.mb-2 {
+    margin-bottom: 10px;
+}
+.mb-3 {
+    margin-bottom: 15px;
+}
+.mb-4 {
+    margin-bottom: 20px;
+}
+.mb-5 {
+    margin-bottom: 45px;
+}
+
+/* Padding */
+.p-2 {
+    padding: 10px;
+}
+.p-4 {
+    padding: 20px;
+}
+.px-2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.px-4 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.py-5 {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.py-4 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.ps-5 {
+    padding-left: 45px;
+}
+
+/* Font Properties */
+.ff-primary {
+    font-family: 'Playfulist', 'Arial', sans-serif;
+}
+.ff-secondary {
+    font-family: 'Lato';
+    font-weight: 400;
+}
+.fs-1 {
+    font-size: 40px;
+}
+.fs-4 {
+    font-size: 20px;
+}
+.fs-5 {
+    font-size: 18px;
+}
+.fw-bold {
+    font-weight: 700;
+}
+
+/* Border Radius */
+.rounded-4 {
+    border-radius: 10px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- STYLE CSS & GLOBAL CSS -->
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TO DO LIST</title>
+  </head>
+  <body>
+    <main
+      class="container d-flex flex-column place-content-center text-center p-4 py-5 mt-5"
+    >
+      <!-- HEADING -->
+      <h1 class="ff-primary fs-1">To Do List</h1>
+      <h3 class="ff-secondary mb-5">
+        list your daily activity to make your productive
+      </h3>
+      <!-- end HEADING -->
+
+      <!-- FORM TO DO LIST -->
+      <div class="w-100">
+        <label for="todo-input" class="d-block ff-secondary fs-4 fw-bold mb-2"
+          >Let's make a list</label
+        >
+
+        <!-- TO DO LIST INPUT -->
+        <input
+          type="text"
+          name="todo-input"
+          id="todo-input"
+          placeholder="What want to do today"
+          class="todo-input p-2 ff-secondary rounded-4"
+        />
+        <button
+          type="submit"
+          class="add-btn p-2 rounded-4 ff-secondary fw-bold"
+        >
+          Add
+        </button>
+        <!-- end TO DO LIST INPUT -->
+      </div>
+      <!-- end FORM TO DO LIST -->
+
+      <!-- TO DO LIST -->
+      <div class="todo-list-container mt-4 text-start ff-secondary fs-4">
+        <ul class="px-4">
+          <!-- <li>Sholat Subuh<span>x</span></li> -->
+        </ul>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
