@@ -1,0 +1,134 @@
+/* HEADER */
+header {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, .05);
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.navbar-container {
+    grid-template-columns: max-content 1fr max-content;
+}
+
+.notif {
+    width: 20px;
+    height: 20px;
+    background-color: #6A4029;
+    color: #fff;
+    top: -10px;
+    left: -10px;
+}
+
+.photo {
+    width: 50px;
+    height: 50px;
+}
+/* end HEADER */
+
+
+
+
+
+.main-container {
+    background-image: url(../img/payment-bg.jpg);
+}
+
+/* MAIN */
+main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content 1fr 1.5fr;
+    grid-template-areas: 'heading heading' 'order-summary address-details' 'order-summary payment-method';
+    column-gap: 15%;
+}
+
+main h3 {
+    grid-area: heading;
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, .8);
+}
+
+
+
+
+
+/* ORDER SUMMARY */
+.summary-head {
+    color: #362115;
+    text-shadow: none;
+}
+
+.order-summary {
+    grid-area: order-summary;
+    background-color: #fff;
+    color: #362115;
+    height: max-content;
+}
+
+
+
+
+
+/* PRODUCT ORDER */
+.product-image {
+    width: 70px;
+    height: 70px;
+}
+
+.product-detail {
+    list-style: none;
+    width: 60%;
+    font-family: 'Rubik',sans-serif;
+}
+
+.order-summary ul:nth-child(4) {
+    font-family: 'Rubik',sans-serif;
+}
+
+.total-order-price h3 {
+    color: #362115;
+    text-shadow: none;
+}
+/* end PRODUCT ORDER */
+/* end ORDER SUMMARY */
+
+
+
+
+
+/* ADDRESS DETAILS */
+.address-details {
+    grid-area: address-details;
+}
+
+.customer-address {
+    background-color: #fff;
+}
+/* end ADDRESS DETAILS */
+
+
+
+
+
+/* PAYMENT METHOD */
+.payment-method {
+    grid-area: payment-method;
+}
+
+.payment-method-list {
+    background-color: #fff;
+}
+
+.payment-method-list i {
+    height: max-content;
+    font-size: 14px;
+    color: #fff;
+}
+
+.payment-method-list li.select i {
+    color: #895537;
+}
+
+.payment-method-icon {
+    width: 40px;
+    height: 40px;
+}
+/* end PAYMENT METHOD */
+/* end MAIN */

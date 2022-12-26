@@ -1,0 +1,72 @@
+/* HEADER */
+header {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, .05);
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.navbar-container {
+    grid-template-columns: max-content 1fr max-content;
+}
+
+.notif {
+    width: 20px;
+    height: 20px;
+    background-color: #6A4029;
+    color: #fff;
+    top: -10px;
+    left: -10px;
+}
+
+.photo {
+    width: 50px;
+    height: 50px;
+}
+/* end HEADER */
+
+
+
+
+
+/* MAIN CONTENT */
+section {
+    background-image: url(../img/history-bg.jpg);
+    color: #fff;
+}
+
+section .history-heading {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, .8);
+}
+
+section p {
+    font-size: 25px;
+}
+
+main {
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    column-gap: 2%;
+    row-gap: 10px;
+}
+
+.history {
+    background-color: #fff;
+    color: #000;
+}
+
+.product-image {
+    width: 70px;
+    height: 70px;
+}
+
+.history-product {
+    list-style: none;
+}
+
+.history .delete-btn {
+    display: none;
+    font-family: 'Rubik',FontAwesome,sans-serif;
+    color: #FFBA33;
+    font-size: 35px;
+    top: -10px;
+    right: -10px;
+}
+/* end MAIN CONTENT */

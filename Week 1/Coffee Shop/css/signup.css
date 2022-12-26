@@ -1,0 +1,89 @@
+/* AUTH CONTAINER */
+.auth-container {
+    height: max-content;
+}
+
+
+
+
+
+/* AUTH IMAGE */
+.auth-bg {
+    width: 50%;
+    height: 100;
+    background-image: url(../img/sign-bg.png);
+}
+/* end AUTH IMAGE */
+
+
+
+
+
+/* AUTH FORM */
+.auth-form {
+    width: 50%;
+}
+
+.login-header h3 {
+    color: rgba(106, 64, 41, 1);
+}
+
+.auth-form .btn-secondary, .with-google {
+    border-radius: 20px;
+}
+
+.with-google {
+    height: 54px;
+    background: white;
+    box-shadow: 0px 6px 20px rgba(196, 196, 196, 0.67);
+    color: #000;
+    margin-bottom: 80px;
+}
+
+.with-google:hover {
+    color: #000;
+}
+/* end AUTH FORM */
+/* end AUTH CONTAINER */
+
+
+
+
+/* FOOTER */
+.footer-brand p:nth-child(2) {
+    width: 100%;
+}
+/* end FOOTER */
+
+
+
+
+
+/* Responsive Breakpoint */
+@media (max-width: 992px) {
+    .login-header h3 {
+        font-size: 3em;
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .auth-form {
+        width: 100%;
+        background-image: url(../img/mobile-sign-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: static;
+    }
+}
+
+
+
+
+
+@media (max-width:576px) {
+    .auth-form form {
+        padding: 20px;
+    }
+}

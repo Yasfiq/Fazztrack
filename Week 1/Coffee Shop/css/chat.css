@@ -1,0 +1,134 @@
+/* HEADER */
+header {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, .05);
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.navbar-container {
+    grid-template-columns: max-content 1fr max-content;
+}
+
+.notif {
+    width: 20px;
+    height: 20px;
+    background-color: #6A4029;
+    color: #fff;
+    top: -10px;
+    left: -10px;
+}
+
+.photo {
+    width: 50px;
+    height: 50px;
+}
+/* end HEADER */
+
+
+
+
+
+/* SEARCH BUTTON */
+.chat-list input#search-btn {
+    width: 250px;
+    background-color: rgba(239, 238, 238, 1);
+    padding: 10px 35px;
+}
+
+.chat-list input#search-btn::-webkit-input-placeholder, input#search-btn::-moz-input-placeholder, input#search-btn::-webkit-input-placeholder  {
+    font-family: 'Poppins',FontAwesome, sans-serif;
+    font-weight: 900;
+}
+/* end SEARCH BUTTON */
+
+
+
+
+
+/* MAIN SECTION */
+section {
+    height: 100vh;
+    background-image: url(../img/chat-bg.jpg);
+}
+
+main.room-chat-container {
+    height: 100%;
+    grid-template-columns: 1fr 1.7fr;
+}
+
+
+
+
+
+/* CHAT LIST */
+.chat-list {
+    height: 100%;
+    background-color: #6A4029;
+    color: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.chat, .chat h5 {
+    font-size: 14px;
+}
+
+.image-person {
+    width: 60px;
+    height: 50px;
+    max-height: 50px;
+    max-width: 60px;
+}
+/* end CHAT LIST */
+
+
+
+
+
+/* ROOM CHAT */
+.room-chat {
+    background-color: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.personal-chat-name div {
+    width: 50px;
+    height: 50px;
+}
+
+.box-chat {
+    background: none;
+    height: 77%;
+    overflow-y: auto;
+}
+
+.chat-message img {
+    max-height: 30px;
+}
+
+.chat-time {
+    font-family: 'Rubik',FontAwesome,sans-serif;
+    font-weight: lighter;
+}
+
+.chat-time i.read {
+    transform: translateX(-50%);
+}
+
+.typing form input {
+    border: none;
+    width: 90%;
+}
+
+.typing form input:focus {
+    outline: none;
+}
+
+.typing input::-webkit-input-placeholder, .typing i {
+    color: #9F9F9F;
+}
+
+.typing i {
+    font-size: 25px;
+}
+/* end ROOM CHAT */

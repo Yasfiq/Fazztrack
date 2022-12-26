@@ -1,0 +1,153 @@
+/* HEADER */
+.navbar-container {
+  grid-template-columns: max-content 1fr max-content;
+}
+/* end HEADER */
+
+/* SECTION CONTENT */
+/* COUPON */
+aside h3 {
+  color: #6a4029;
+}
+
+.coupon-card-container {
+  height: 400px;
+}
+
+.swiper-slide {
+  height: 100%;
+}
+
+.swiper {
+  width: 290px;
+  height: 400px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide img {
+  height: 100%;
+}
+
+.coupon-img {
+  width: 100px;
+  height: 100px;
+}
+/* end COUPON */
+
+/* PRODUCT */
+/* CATEGORIES */
+.category {
+  color: #9f9f9f;
+}
+
+.category.active {
+  color: #6a4029;
+  font-weight: 700;
+  border-bottom: 3px solid #000;
+  padding-bottom: 10px;
+  transform: translateY(7px);
+}
+
+.category:hover {
+  color: #6a4029;
+  border-bottom: 3px solid #000;
+  padding-bottom: 10px;
+  transform: translateY(7px);
+}
+/* end CATEGORIES */
+
+/* MENU */
+main {
+  width: 70%;
+}
+
+.menu {
+  grid-template-columns: repeat(auto-fit, 200px);
+  gap: 20px;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.product {
+  /* width: 180px; */
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(90, 90, 90, 0.2);
+  cursor: pointer;
+}
+
+.product:hover {
+  border-color: #6a4029;
+}
+
+.product-image {
+  width: 120px;
+  height: 120px;
+}
+
+.terms-and-conditions {
+  text-align: left;
+}
+
+.terms-and-conditions li {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.hide {
+  display: none;
+  transition: 0.5s ease;
+}
+/* end MENU */
+/* end PRODUCT */
+/* end SECTION CONTENT */
+
+/* Responsive Breakpoint */
+@media (max-width: 992px) {
+  section,
+  main {
+    width: 100%;
+  }
+
+  .categories {
+    overflow-x: auto;
+    height: max-content;
+  }
+
+  .category {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .product-image {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .product h4 {
+    font-size: 18px;
+  }
+
+  .menu {
+    gap: 10px;
+  }
+
+  .product {
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    grid-template-columns: repeat(auto-fit, 150px);
+  }
+}

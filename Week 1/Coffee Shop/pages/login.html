@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="../css/bootstrap css/bootstrap.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+
+    <!-- RUBIK FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME v.4.7.0 -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- POPPINS FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME 5.14.4 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container-fluid d-flex p-0 bg-center auth-container">
+      <!-- AUTH BG -->
+      <section
+        class="bg-cover bg-center bg-no-repeat d-none d-md-none d-sm-none d-lg-block auth-bg"
+      ></section>
+      <!-- AUTH BG -->
+
+      <!-- AUTH FORM -->
+      <section class="auth-form">
+        <!-- LOGIN HEADER -->
+        <div
+          class="d-block d-lg-flex d-md-block d-sm-block justify-content-between py-4 px-5 login-header"
+        >
+          <a
+            href="../index.html"
+            class="d-none d-md-none d-sm-none d-lg-flex nav-brand"
+          >
+            <img
+              src="../img/icon/logo coffee shop.png"
+              alt="Logo Coffee Shop"
+            />
+            Coffee Shop
+          </a>
+          <h3 class="d-none d-sm-none d-md-none d-lg-block head-3">Login</h3>
+          <h3 class="d-block d-lg-none head-3">Welcome!</h3>
+        </div>
+        <!-- end LOGIN HEADER -->
+
+        <!-- LOGIN FORM -->
+        <form class="w-100 px-5x2 mt-5">
+          <!-- AUTH INPUT -->
+          <div class="auth-input pb-4">
+            <label class="fw-bold" for="email-address">Email Address :</label>
+            <input
+              type="email"
+              name="email-address"
+              id="email-address"
+              placeholder="Enter your email address"
+            />
+          </div>
+          <div class="auth-input mb-2">
+            <label class="fw-bold" for="password">Password :</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <!-- end AUTH INPUT -->
+
+          <a href="forgot-password.html" class="d-block fw-bold"
+            >Forgot Password?</a
+          >
+
+          <!-- LOGIN BUTTON -->
+          <a href="product.html">
+            <button
+              class="mt-5 fw-bold w-100 btn-primary btn-drop-shadow"
+              type="button"
+            >
+              Login
+            </button>
+          </a>
+          <button
+            class="mt-4 mb-5 fw-bold w-100 btn-primary border-box with-google"
+          >
+            <img src="../img/icon/google.svg" alt="Logo Google" height="100%" />
+            Login with Google
+          </button>
+          <!-- end LOGIN BUTTON -->
+
+          <hr style="border-width: 2px; margin-bottom: 45px" />
+          <p class="fw-bold">Don't have an account?</p>
+        </form>
+        <!-- end LOGIN FORM -->
+
+        <!-- SIGN UP BUTTON -->
+        <a href="signup.html" class="mx-5x2 d-block fw-bold btn-secondary"
+          >Sign up here</a
+        >
+        <!-- end SIGN UP BUTTON -->
+
+        <!-- FOOTER -->
+        <footer
+          class="container d-md-none d-sm-none d-none d-lg-flex justify-content-between pt-5 footer-container"
+        >
+          <div
+            class="d-flex flex-column justify-content-center align-items-center footer-brand"
+          >
+            <div class="pb-4 nav-brand">
+              <img
+                src="../img/icon/logo coffee shop.png"
+                alt="Logo Coffee Shop"
+              />
+              Coffee Shop
+            </div>
+            <p style="background: none; color: inherit">
+              Coffee Shop is a store that sells some good meals, and especially
+              coffee. We provide high quality beans
+            </p>
+            <div class="pb-4 social-media">
+              <a href="">
+                <img
+                  class="me-3"
+                  src="../img/icon/facebook-circle.svg"
+                  alt="icon facebook"
+                />
+              </a>
+              <a href="">
+                <img
+                  class="me-3"
+                  src="../img/icon/twitter-circle.svg"
+                  alt="icon twitter"
+                />
+              </a>
+              <a href="">
+                <img
+                  class="me-3"
+                  src="../img/icon/instagram-circle.svg"
+                  alt="icon instagram"
+                />
+              </a>
+            </div>
+            <p>&copy2020CoffeeStore</p>
+          </div>
+          <div class="w-50 justify-content-around footer-description">
+            <ul class="footer-item">
+              <li><a class="active" href="Product">Product</a></li>
+              <li><a href="">Download</a></li>
+              <li><a href="">Pricing</a></li>
+              <li><a href="">Locations</a></li>
+              <li><a href="">Countries</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+            <div class="footer-item">
+              <li><a class="active" href="">Engage</a></li>
+              <li><a href="">Coffee Shop ?</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Terms of Service</a></li>
+            </div>
+          </div>
+        </footer>
+        <!-- end FOOTER -->
+      </section>
+      <!-- AUTH FORM -->
+    </div>
+  </body>
+</html>

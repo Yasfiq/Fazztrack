@@ -1,0 +1,147 @@
+/* HEADER */
+header {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, .05);
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.navbar-container {
+    grid-template-columns: max-content 1fr max-content;
+}
+
+.notif {
+    width: 20px;
+    height: 20px;
+    background-color: #6A4029;
+    color: #fff;
+    top: -10px;
+    left: -10px;
+}
+
+.photo {
+    width: 50px;
+    height: 50px;
+}
+/* end HEADER */
+
+
+
+
+
+/* ORDER DESCRIPTION */
+.product-details-container {
+    font-family: 'Rubik',sans-serif;
+}
+
+.order-description p {
+    color: #6A4029;
+    font-size: 20px;
+}
+
+.order-description h1 {
+    font-family: 'Poppins',sans-serif;
+}
+
+.order-details {
+    font-size: 20px;
+}
+
+.total {
+    color: #000;
+    /* font-family: 'Poppins',sans-serif; */
+    font-size: 30px;
+}
+/* end ORDER DESCRIPTION */
+
+
+
+
+
+/* PRODUCT DETAILS */
+.breadcrumb {
+    text-decoration: none;
+    color: #4F5665;
+}
+
+.product-image {
+    width: 250px;
+    height: 250px;
+}
+
+.delivery-method, .time {
+    background-color: #F4F4F8;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.delivery-method.active, .time.active {
+    font-weight: 700;
+    background-color: #6A4029;
+    color: #fff;
+}
+
+.time-title, .set-time-title {
+    font-size: 20px;
+}
+
+.set-time-reservation {
+    background-color: #F4F4F8;
+    padding: 10px;
+}
+
+.set-time-reservation::-webkit-input-placeholder {
+    color: #9F9F9F;
+}
+
+.set-time-reservation:focus {
+    outline: none;
+}
+/* end PRODUCT DETAILS */
+
+
+
+
+
+/* CHECKOUT */
+.checkout-img {
+    width: 100px;
+    height: 100px;
+}
+
+.checkout ul {
+    list-style: none;
+    font-size: 25px;
+}
+
+.checkout ul li {
+    font-size: 16px;
+}
+
+.checkout-btn {
+    font-family: 'Rubik',FontAwesome,sans-serif;
+    font-size: 25px;
+}
+
+.checkout-btn i {
+    font-size: 50px;
+    color: #FFBA33;
+    cursor: pointer;
+}
+/* CHECKOUT */
+
+
+
+
+
+/* SIZE */
+.size p {
+    width: 50px;
+    height: 50px;
+    color: #6A4029;
+    font-size: 25px;
+}
+
+.plus, .minus {
+    cursor: pointer;
+}
+/* end SIZE */

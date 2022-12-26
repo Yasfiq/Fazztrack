@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="../css/bootstrap css/bootstrap.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/product-details.css" />
+
+    <!-- RUBIK FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME v.4.7.0 -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- POPPINS FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME 5.14.4 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="container-fluid py-2">
+      <!-- NAVIGATION -->
+      <nav
+        class="container-lg px-lg-0 px-md-4 p-3 navbar-container d-block d-lg-grid"
+      >
+        <!-- NAVBAR BRAND -->
+        <a href="../index.html" class="nav-brand d-none d-lg-flex">
+          <img src="../img/icon/logo coffee shop.png" alt="Logo Coffee Shop" />
+          Coffee Shop
+        </a>
+        <!-- end NAVBAR BRAND -->
+
+        <!-- MOBILE BUTTON -->
+        <div class="mobile-btn d-flex justify-content-between w-100 d-lg-none">
+          <svg
+            viewBox="0 0 25 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.59863 8.33333H13.5001M1.59863 1H23.5986M1.59863 15.6667H23.5986"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <!-- end MOBILE BUTTON -->
+
+        <!-- NAV MENU -->
+        <ul class="m-0 nav-menu d-none d-lg-flex">
+          <li class="nav-menu-list me-5">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="nav-menu-list me-5 menu-active">
+            <a href="product.html">Product</a>
+          </li>
+          <li class="nav-menu-list me-5"><a href="cart.html">Your Cart</a></li>
+          <li class="nav-menu-list me-5"><a href="history.html">History</a></li>
+        </ul>
+        <!-- end NAV MENU -->
+
+        <!-- FEATURES -->
+        <div class="d-none d-lg-flex align-items-center features">
+          <i class="fas fa-search search-btn" style="font-size: 30px"></i>
+          <div class="mx-4 message-notif position-relative">
+            <p
+              class="notif position-absolute d-flex justify-content-center align-items-center rounded-4 text-white"
+            >
+              1
+            </p>
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="30" height="30" fill="url(#pattern0)" />
+              <defs>
+                <pattern
+                  id="pattern0"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_78_615"
+                    transform="scale(0.00390625)"
+                  />
+                </pattern>
+                <image
+                  id="image0_78_615"
+                  width="256"
+                  height="256"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACKFBMVEUAAABRUWhQVmVOVmRPVmVQVmVPVmVPVmVPVmVOVmVPVWVVVWFOWGdPVmVPVmZPVmVPVmVQV2VQVWROTmJOVWVPVmVPVWVPVmZVVWpLWmlQVmZPVmVPVmRQUGAAAABPV2RPVmVOVWWAgIBQV2ZOVmVPVWVNVWRQVmZPVmVQVmVPVmVPVmVAQIBQVmVOVmZmZmZPVmRPVmVPV2VPVmVPVWRPVWVPVmVPVmVPVWVOVmVOVmROVmVPV2ZNV2VOVmVPVmVPVmVVVWZPVmVOVmVNTWZPVmVPVWZPVmVOVmVGXV1PVmVPVmVPVmVNV2RRVWdPVmRQV2RPVWVSUmRPWGFQVWVPVmVPVWZPWGVPV2ZOVWRPVmVQV2VPVmVNWWZQVWRPV2VPVmVOVmVPVmVPV2ZQVmVPV2VPVmVVVVVJSW1RV2NQV2VPVmVPVmVPVmVQV2VQVmVPVWRPVmVNU2VPVmRPVWdPVmVOVmZQWGhOWGJPVmVQVmVPVmRPVWZOVmNOVmVNVWZRV2dPVmRQVWRPWGZJW21PVmVPVmVPVWZVVXFPVmZPVmVSUmZPVmVPVmVOV2ZPV2RPV2ZQVWVPVmVPVmVSUmNQVmZOV2ZPVWRRUWtPV2VOV2VPV2VPVmVAYGBOV2RRV2RQVmZPVWZPVmVPVmRTU2JPVmNOVWRQVmZVVVVPVmRPVmVOVWVOVmVPVmVOVmVPV2RPVmVOVmdQVmRQV2ZRVWVPVmVPVmUAAAClOHFbAAAAtnRSTlMAFlN/p83e7vqmfhU0jtP+0o0zDXLV1HEMEYDt7BABXulvAiPDwiFQ8VaLiASdowWysZ+kVFHw779iXOpkNWXy6A/maArbe/d8C3f46zg553DRHB0w9i06inXP2v0UY2rzqcxnyuD5BgcskPSV/JO9vJIrkSq7XyAa5aprzjuJHi96ZjcO1vVaCZS+GcnhVYSosKHkH33dyxOiW9eXCJYpdnjcwSJNRXMDm3ROwOPQpUQ+oEY/+yu1ILUAAAABYktHRACIBR1IAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJTUUH5AoUEAQV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"
+                />
+              </defs>
+            </svg>
+          </div>
+          <div
+            class="bg-cover bg-no-repeat bg-center rounded-circle photo"
+            style="background-image: url(../img/foto-profile.jpg)"
+          ></div>
+        </div>
+        <!-- end FEATURES -->
+      </nav>
+      <!-- end NAVIGATION -->
+    </header>
+    <!-- end HEADER -->
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-nav d-lg-none d-block position-absolute top-0">
+      <div class="profile-header p-5 text-center">
+        <div
+          class="profile-image rounded-circle bg-cover bg-no-repeat bg-center my-0 mx-auto"
+        ></div>
+        <h3 class="username pt-3 fs-sm-4">Zulaikha</h3>
+        <p class="user-email fw-semibold fs-md-4 fs-6">zulaikha17@gmail.com</p>
+      </div>
+      <ul class="mobile-menu d-flex flex-column p-md-5 p-4">
+        <li class="border-bottom border-3 pb-3 mb-3 mobile-menu-list">
+          <a href="" class="d-flex align-items-center"
+            ><i class="far fa-user-circle fs-md-2 fs-4"></i>
+            <p class="fw-bold p-0 m-0 ps-3 fs-md-3 fs-6">Edit profile</p>
+          </a>
+        </li>
+        <li class="mobile-menu-list border-bottom border-3 pb-3 mb-3">
+          <a href="" class="d-flex align-items-center">
+            <i class="fal fa-cart-arrow-down fs-md-1 fs-4"></i>
+            <p class="fw-bold p-0 m-0 ps-3 fs-md-3 fs-6">Orders</p>
+          </a>
+        </li>
+        <li class="mobile-menu-list border-bottom border-3 pb-3 mb-3">
+          <a href="" class="d-flex align-items-center">
+            <i class="fas fa-utensils fs-md-2 fs-4"></i>
+            <p class="fw-bold p-0 m-0 ps-3 fs-md-3 fs-6">All menu</p>
+          </a>
+        </li>
+        <li
+          class="mobile-menu-list d-flex align-items-center border-bottom border-3 pb-3 mb-3"
+        >
+          <a href="" class="d-flex align-items-center">
+            <i class="fas fa-user-shield fs-md-2 fs-4"></i>
+            <p class="fw-bold p-0 m-0 ps-3 fs-md-3 fs-6">Privacy policy</p>
+          </a>
+        </li>
+        <li class="mobile-menu-list border-bottom border-3 pb-3 mb-3">
+          <a href="" class="d-flex align-items-center">
+            <i class="fas fa-shield-alt fs-md-2 fs-4"></i>
+            <p class="fw-bold p-0 m-0 ps-3 fs-md-3 fs-6">Security</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- end MOBILE MENU -->
+
+    <!-- PRODUCT DETAILS -->
+    <div class="container product-details-container">
+      <div class="row">
+        <section class="col-sm-6 py-3 product-details">
+          <a href="" class="breadcrumb p-0 d-inline">Favorite & Promo</a>
+          <p class="d-inline fw-bold">
+            <i class="fas fa-chevron-right"></i> Cold Brew
+          </p>
+          <div
+            class="rounded-circle product-image bg-cover bg-center bg-no-repeat mx-auto mt-4"
+            style="background-image: url(../img/cold-brew.jpg)"
+          ></div>
+          <div class="delivery-and-time p-4 mt-4 shadow rounded-4">
+            <p class="fw-bold">Delivery and Time</p>
+            <div class="d-flex">
+              <p class="delivery-method rounded-3 active">Dive In</p>
+              <p class="delivery-method rounded-3">Door Delivery</p>
+              <p class="delivery-method rounded-3">Pick Up</p>
+            </div>
+            <div class="d-flex">
+              <p class="py-2 pe-5 me-2 time-title">Now</p>
+              <p class="time rounded-3 active">Yes</p>
+              <p class="time rounded-3">No</p>
+            </div>
+            <div class="d-flex">
+              <p class="set-time-title pt-3 pe-3">Set Time</p>
+              <input
+                type="text"
+                class="set-time-reservation rounded-4 border border-2 w-75"
+                placeholder="Enter time for reservation"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="col-sm-6 py-5 mt-5 px-auto order-description">
+          <h1 class="head-3 text-center fw-semibold">COLD BREW</h1>
+          <p class="pt-4">
+            Cold brewing is a method of brewing that combines ground coffee and
+            cool water and uses time instead of heat to extract the flavor. It
+            is brewed in small batches and steeped for as long as 48 hours.
+          </p>
+          <p>Delivery only on <b>Monday to friday</b> at <b>1 - 7 pm</b></p>
+          <div
+            class="d-flex align-items-center justify-content-between order-details pb-4"
+          >
+            <div class="d-flex border border-secondary rounded-2">
+              <div class="p-2 fw-bold minus">-</div>
+              <div
+                class="p-2 fw-bold number-of-order border-start border-end border-secondary"
+                contenteditable="false"
+              >
+                1
+              </div>
+              <div class="p-2 fw-bold plus">+</div>
+            </div>
+            <h6 class="total fw-bold">IDR 30.000</h6>
+          </div>
+          <button class="btn-secondary w-100 fw-bold">Add to Cart</button>
+          <button class="btn-primary w-100 fw-bold mt-3">Add to Cart</button>
+        </section>
+      </div>
+      <div class="row pt-4">
+        <section class="col-sm-4 rounded-4 shadow">
+          <h3 class="fw-bold text-center pt-3">Choose a size</h3>
+          <div class="size d-flex justify-content-evenly">
+            <p
+              class="rounded-circle fw-bold bg-warning d-flex align-items-center justify-content-center"
+            >
+              R
+            </p>
+            <p
+              class="rounded-circle fw-bold bg-warning d-flex align-items-center justify-content-center"
+            >
+              L
+            </p>
+            <p
+              class="rounded-circle fw-bold bg-warning d-flex align-items-center justify-content-center"
+            >
+              XL
+            </p>
+          </div>
+        </section>
+        <section
+          class="col-sm-7 offset-sm-1 d-flex flex-column flex-md-row flex-lg-row checkout shadow p-3 mb-lg-0 mb-md-0 mb-5 rounded-4 justify-content-between"
+        >
+          <div class="d-flex">
+            <div
+              class="bg-cover bg-center bg-no-repeat rounded-circle checkout-img"
+              style="background-image: url(../img/cold-brew.jpg)"
+            ></div>
+            <ul class="fw-bold">
+              COLD BREW
+              <li class="fw-normal">x1 (Large)</li>
+              <li class="fw-normal">x1 (Regular)</li>
+            </ul>
+          </div>
+          <div
+            class="d-flex justify-content-center align-items-center checkout-btn pe-5"
+          >
+            <p class="fw-bold pt-3 pe-5">Checkout</p>
+            <a href="cart.html"><i class="fal fa-arrow-circle-right"></i></a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- end PRODUCT DETAILS -->
+
+    <!-- FOOTER -->
+    <footer
+      class="container d-md-none d-sm-none d-none d-lg-flex pt-5 justify-content-between footer-container"
+    >
+      <div class="footer-brand">
+        <div href="../index.html" class="pb-4 nav-brand">
+          <img src="../img/icon/logo coffee shop.png" alt="Logo Coffee Shop" />
+          Coffee Shop
+        </div>
+        <p style="background: none; color: inherit">
+          Coffee Shop is a store that sells some good meals, and especially
+          coffee. We provide high quality beans
+        </p>
+        <div class="pb-4 social-media">
+          <a href="">
+            <img
+              class="me-3"
+              src="../img/icon/facebook-circle.svg"
+              alt="icon facebook"
+            />
+          </a>
+          <a href="">
+            <img
+              class="me-3"
+              src="../img/icon/twitter-circle.svg"
+              alt="icon twitter"
+            />
+          </a>
+          <a href="">
+            <img
+              class="me-3"
+              src="../img/icon/instagram-circle.svg"
+              alt="icon instagram"
+            />
+          </a>
+        </div>
+        <p>&copy2020CoffeeStore</p>
+      </div>
+      <div class="justify-content-between footer-description">
+        <ul class="footer-item">
+          <li><a class="active" href="product.html">Product</a></li>
+          <li><a href="">Download</a></li>
+          <li><a href="">Pricing</a></li>
+          <li><a href="">Locations</a></li>
+          <li><a href="">Countries</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+        <div class="footer-item">
+          <li><a class="active" href="">Engage</a></li>
+          <li><a href="">Coffee Shop ?</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Terms of Service</a></li>
+        </div>
+      </div>
+    </footer>
+    <!-- end FOOTER -->
+
+    <!-- MOBILE NAV FOOTER -->
+    <div
+      class="mobile-nav-footer position-fixed bottom-0 p-4 ps-5 m-0 w-100 d-lg-none d-grid"
+    >
+      <i class="fas fa-home active"></i>
+      <i class="fas fa-user pe-5"></i>
+      <i class="far fa-comment-dots pe-5"></i>
+    </div>
+    <!-- end MOBILE NAV FOOTER -->
+
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/bootstrap js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Add class active when delivery method on click
+      $(".delivery-method").click(function () {
+        $(".delivery-method").removeClass("active");
+        $(this).addClass("active");
+      });
+
+      // Add class active when time now on click
+      $(".time").click(function () {
+        $(".time").removeClass("active");
+        $(this).addClass("active");
+      });
+
+      // Validate only number for editable number of order
+      // $(".number-of-order").on("keydown", function (event) {
+      //   if (
+      //     event.which != 8 &&
+      //     event.which != 46 &&
+      //     event.which != "\W\g" &&
+      //     isNaN(String.fromCharCode(event.which))
+      //   ) {
+      //     event.preventDefault();
+      //   }
+      // });
+    </script>
+  </body>
+</html>

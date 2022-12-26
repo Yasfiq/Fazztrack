@@ -1,0 +1,261 @@
+body {
+  font-size: 16px;
+  font-family: "Rubik", FontAwesome, sans-serif;
+}
+
+body .head-3 {
+  color: rgba(11, 19, 42, 1);
+}
+
+/* HEADER */
+.navbar-container {
+  grid-template-columns: max-content 1fr repeat(2, max-content);
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  color: rgb(11, 19, 42);
+}
+
+.login-btn:hover {
+  color: rgba(106, 64, 41, 1);
+}
+/* end LOGIN BUTTON */
+
+/* SIGNUP BUTTON */
+.signup-btn:hover {
+  color: rgba(106, 64, 41, 1);
+  box-shadow: 0px 6px 20px rgba(255, 186, 51, 0.4);
+}
+/* end SIGNUP BUTTON */
+/* end HEADER */
+
+/* HERO SECTION */
+.hero-container {
+  height: 750px;
+  background-image: url(../img/hero-img.webp);
+}
+
+.hero {
+  grid-template-rows: 60px max-content 60px 200px;
+  overflow-y: visible;
+}
+
+/* SEARCH BUTTON */
+.hero input#search-btn {
+  width: 314px;
+  background-color: rgba(239, 238, 238, 1);
+}
+
+.hero input#search-btn::-webkit-input-placeholder,
+input#search-btn::-moz-input-placeholder,
+input#search-btn::-webkit-input-placeholder {
+  font-family: "Poppins", FontAwesome, sans-serif;
+  font-weight: 900;
+}
+/* end SEARCH BUTTON */
+
+/* HERO TEXT */
+.hero-text h1 {
+  font-size: 50px;
+}
+
+.hero-text p {
+  text-align: justify;
+}
+/* end HERO TEXT */
+
+/* GET STARTED BUTTON */
+.get-started-btn {
+  padding: 17px 75px;
+}
+/* end GET STARTED BUTTON */
+
+/* ABOUT COMPANY */
+.about-company {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 150px;
+  box-shadow: 0px 42px 40px rgba(13, 16, 37, 0.1);
+}
+
+.about-company svg {
+  margin-right: 36px;
+}
+
+.about-company div p {
+  width: min-content;
+}
+
+.about-company div p span {
+  font-size: 25px;
+}
+/* end ABOUT COMPANY */
+/* end HERO SECTION */
+
+/* WHY US */
+.why-us {
+  padding-top: 162px;
+  padding-bottom: 162px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "image text-h3" "image whyus-paragraph" "image advantages-list";
+  grid-template-rows: 1fr max-content 1fr;
+  /* column-gap: 100px; */
+  column-gap: 10%;
+}
+
+.why-us img {
+  grid-area: image;
+}
+
+.why-us h3 {
+  grid-area: text-h3;
+  align-self: end;
+}
+
+.why-us p {
+  grid-area: whyus-paragraph;
+  color: rgba(79, 86, 101, 1);
+}
+
+.why-us ul {
+  grid-area: advantages-list;
+}
+
+.why-us ul li {
+  font-size: 0.9em;
+}
+
+.why-us ul i {
+  color: rgba(47, 171, 115, 1);
+}
+/* end WHY US */
+
+/* FAVORITE MENU */
+.favorite-menu {
+  margin-bottom: 150px;
+}
+
+.favorite-menu p {
+  margin-bottom: 90px;
+}
+
+.favorite-menu-list {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 5%;
+}
+
+.favorite-menu-item {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, max-content) 1fr repeat(2, max-content);
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.favorite-menu-item:hover {
+  border: 2px solid #965b3b !important;
+}
+
+.menu-item-img {
+  width: 128px;
+  height: 128px;
+  background-image: url(../img/hazelnut\ latte.webp);
+}
+
+.favorite-menu-item:nth-child(2) .menu-item-img {
+  background-image: url(../img/favorite-menu-item\ 2.webp);
+}
+
+.favorite-menu-item:nth-child(3) .menu-item-img {
+  background-image: url(../img/favorite-menu-item\ 3.webp);
+}
+
+.menu-item-desc {
+  font-size: 0.9em;
+}
+
+.menu-item-desc li i {
+  color: rgba(47, 171, 115, 1);
+}
+
+p.item-price {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.order-btn {
+  background: none;
+  border: 2px solid rgba(255, 186, 51, 1);
+}
+
+.order-btn:hover {
+  background: rgba(255, 186, 51, 1);
+}
+/* end FAVORITE MENU */
+
+/* STORE MAP */
+.store-map {
+  padding-bottom: 100px;
+}
+
+.store-map p {
+  margin-bottom: 120px;
+  color: rgba(79, 86, 101, 1);
+}
+/* end STORE MAP */
+
+/* PARTNER */
+.partner-list img {
+  width: 15%;
+}
+/* end PARTNER */
+
+/* REVIEW */
+.card-container {
+  overflow-x: hidden;
+  scrollbar-color: rgba(0, 0, 0, 0);
+}
+
+.card-item {
+  flex: none;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.item-slide {
+  display: flex;
+  padding: 50px;
+}
+
+.photo {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/review-1.webp);
+}
+
+.indicators {
+  max-width: 100px;
+}
+
+.swiper-pagination-bullet {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #6a4029 !important;
+}
+
+.controls i {
+  font-size: 50px;
+  color: #6a4029;
+}
+/* end REVIEW */
+
+/* PROMO */
+.promo {
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.promo p {
+  color: #4f5665;
+}
+/* end PROMO */
