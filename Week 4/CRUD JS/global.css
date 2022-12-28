@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 90%;
+    margin: 50px auto;
+}
+.text-white {
+    color: white;
+}
+.td-none {
+    text-decoration: none;
+}
+.p-2 {
+    padding: 10px;
+}
+.p-3 {
+    padding: 15px;
+}
+.p-4 {
+    padding: 20px;
+}
+.py-2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.my-2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.fs-4 {
+    font-size: 20px;
+}
+.fw-bold {
+    font-weight: 700;
+}
+.rounded-1 {
+    border-radius: 10px;
+}
+.rounded-2 {
+    border-radius: 15px;
+}
+.d-inline-block {
+    display: inline-block;
+}
+.d-flex {
+    display: flex;
+}
+.place-content-center {
+    justify-content: center;
+    align-items: center;
+}
+.position-fixed {
+    position: fixed;
+}
+.shadow {
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, .1);
+}

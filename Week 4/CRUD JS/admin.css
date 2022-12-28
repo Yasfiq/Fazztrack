@@ -1,0 +1,32 @@
+td img {
+    width: 50px;
+}
+
+.insert {
+    background-color: rgb(0, 140, 255);
+}
+
+.table-container td {
+    padding: 15px;
+    font-size: 25px;
+}
+
+.modal-container {
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+}
+
+.modal {
+    width: auto;
+    height: auto;
+    background-color: #fff;
+}
+
+.save-btn, .cancel-btn {
+    border: none;
+    background-color: rgb(0, 140, 255);
+}

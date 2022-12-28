@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Page</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="insert.css" />
+    <script src="fetcher.js"></script>
+  </head>
+  <body>
+    <form class="form container">
+      <!-- <label for="name">Name</label>
+      <input type="text" name="name" id="name" class="name" />
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" class="username" />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" class="email" /> -->
+      <table>
+        <tr>
+          <td class="p-2 fs-4 fw-bold"><label for="name">Name</label></td>
+          <td class="p-2 fs-4 fw-bold">:</td>
+          <td class="p-2 fs-4 fw-bold">
+            <input type="text" name="name" id="name" class="name" />
+          </td>
+        </tr>
+        <tr>
+          <td class="p-2 fs-4 fw-bold">
+            <label for="username">Username</label>
+          </td>
+          <td class="p-2 fs-4 fw-bold">:</td>
+          <td class="p-2 fs-4 fw-bold">
+            <input type="text" name="username" id="username" class="username" />
+          </td>
+        </tr>
+        <tr>
+          <td class="p-2 fs-4 fw-bold"><label for="email">Email</label></td>
+          <td class="p-2 fs-4 fw-bold">:</td>
+          <td class="p-2 fs-4 fw-bold">
+            <input type="email" name="email" id="email" class="email" />
+          </td>
+        </tr>
+      </table>
+      <button type="submit" class="p-2 rounded-1 text-white fs-4 my-2 save-btn">
+        Save
+      </button>
+    </form>
+    <script>
+      const formEl = document.querySelector(".form");
+
+      formEl.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(formEl);
+        const data = new URLSearchParams(formData);
+
+        fetcher("POST", "Users", data);
+        setTimeout(() => {
+          alert("Data berhasil ditambahkan");
+          window.location.href = "admin.html";
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
